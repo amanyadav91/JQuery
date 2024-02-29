@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn JQuery</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+      }
+      .box {
+        background: rosybrown;
+        padding: 10px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JQuery Mouse Events</h1>
+    <div class="box" id="test">
+      <h2>Test box</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum quasi
+        provident vero ullam nihil est architecto voluptatibus laboriosam alias
+        inventore modi fuga, rem veritatis nostrum sequi dolore nulla itaque?
+      </p>
+    </div>
+    <button>Click me!</button>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("#test").click(function () {
+        $("#test").css('background-color','lightblue');
+      });
+    });
+  </script>
+</html>

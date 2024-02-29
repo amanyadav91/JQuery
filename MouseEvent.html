@@ -30,8 +30,32 @@
   </body>
   <script>
     $(document).ready(function () {
+      //here you use the click selector for the click on mouse and changes this  background color
+
       $("#test").click(function () {
         $("#test").css('background-color','lightblue');
+      });
+
+      //here you use the dbclick selector for the click on mouse and changes this  background color
+      $("#test").dblclick(function () {
+        $("#test").css('background-color','green');
+      });
+
+      // here you use the contextmenu(onrightclick) selector for the click on mouse and changes this  background color
+      $("#test").contextmenu(function () {
+        $("#test").css('background-color','red');
+      });
+      
+//here the mouseenter  event is triggered when the mouse pointer enters in the specified element and
+//mouseleave event is triggered when the mouse pointer leaves from the specified element
+      $("#test").mouseenter(function () {
+        $("#test").css('background-color','yellow');
+      });
+
+      
+      //here the mouse leave selector for the click on mouse and changes this  background color to white
+      $("#test").mouseleave(function () {
+        $("#test").css('background-color','grey');
       });
     });
   </script>

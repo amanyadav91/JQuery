@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set method</title>
+     <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+      }
+      .box {
+        background: rosybrown;
+        padding: 10px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JQuery Mouse Events</h1>
+    <div class="box" id="test">
+      <h2>Test box</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum quasi
+        provident vero ullam nihil est architecto voluptatibus laboriosam alias
+        inventore modi fuga, rem veritatis nostrum sequi dolore nulla itaque?
+      </p>
+    </div>
+    <button>Click me!</button>
+  </body>
+  <script>
+    $(document).ready(function(){
+        // set data to the box
+        $("p").text("Hello World Aman");
+    })
+  
+    $("button").click(function(){
+        // set data to the box
+        $(".box").text("Hello World");
+    })
+  </script>
+
+</html>

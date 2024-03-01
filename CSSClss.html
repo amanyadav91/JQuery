@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS class</title> <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+      }
+      .box {
+        background: rosybrown;
+        padding: 10px;
+        border: 1px solid black;
+      }
+      .first{
+        background-color: blue;
+      }
+      .second{
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JQuery Mouse Events</h1>
+    <div class="box" id="test">
+      <h2>Test box</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum quasi
+        provident vero ullam nihil est architecto voluptatibus laboriosam alias
+        inventore modi fuga, rem veritatis nostrum sequi dolore nulla itaque?
+      </p>
+    </div>
+    <button id="adbtn">Add Class</button>
+     <button id="rebtn">Remove Class</button>
+      <button id="tbtn">Toggle Class</button>
+  </body>
+  <script>
+    $(document).ready(function(){
+        // add class to the box
+        $("#adbtn").click(function(){
+            $(".box").addClass('first');
+        })
+        // remove class to the box
+        $("#rebtn").click(function(){
+            $(".box").removeClass('second');
+        })
+        // toggle class to the box
+        $("#tbtn").click(function(){
+            $(".box").toggleClass('second');
+        })
+    })
+  </script>
+
+</html>

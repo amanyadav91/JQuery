@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+     <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        body{font-family: 'Courier New', Courier, monospace;}
+        #box{
+            background-color: yellowgreen;
+            padding: 10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Events</h1>
+    <form action="" class="sform">
+        <label for="">Name</label>
+        <input type="email" id="sname"><br>
+        <label for="">class</label>
+        <input type="text" id="sclass"><br>
+        
+        <label for="">Contary</label>
+        <select name="" id="scountry">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Canada">Canada</option>
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+        <!-- JQuery code -->
+        <script> 
+        $(document).ready(function(){
+            // focus is used to change the background color of the input field when the user clicks on it
+            $('#sname').focus(function(){
+                $(this).css('background-color','lightblue');
+            });
+
+            // blur is used to change the background color of the input field when the user clicks out of it
+            $('#sname').blur(function(){
+                $(this).css('background-color','blue');
+            });
+           
+            // change is used to change the background color of the input field when the user selects the option from the dropdown on enter
+            $('#sclass').change(function(){
+                $(this).css('background-color','red');
+            });
+
+            $('#scountry').change(function(){
+            var a =$(this).val();
+                $('.sform').text(a);
+            });
+        
+            // submit is used to change the background color of the input field when the user clicks on the submit button
+            $('.sform').submit(function(){
+                alert('Form Submitted');
+                console.log('Form Submitted');
+            });
+            // on is used to change the background color of the input field when the user clicks on the submit button
+            $("#scountry").on("click", function(){
+                $(this).css('background-color','green');
+            });
+            
+           //select work on select the input field
+            $("#sname","#sclass").select(function(){
+                $(this).css('background-color','yellow');
+            });
+
+        })
+        </script>
+    </form><hr>
+</body>
+</html>

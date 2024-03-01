@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Keyboard Event</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        font-family: monospace;
+      }
+      *{
+        box-sizing: border-box;
+        margin: 0;
+      }
+      #box {
+        background-color: yellowgreen;
+        padding: 10px;
+        border: 2px solid black;
+      }
+      .boxbg{
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Keyboard Events in jquery</h1>
+    <div class="test" id="box">
+      <h2>Test Box</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta omnis,
+        aperiam, repellat veritatis molestias ullam dicta ab deleniti corporis,
+        aut animi. Dicta consequuntur illo cum error? Nihil, id delectus quia
+        cupiditate ex rerum. Doloribus dolor sapiente iusto. Aliquam quidem
+        rerum aperiam repellendus accusantium laudantium labore eum. Quos iusto
+        quaerat minus!
+      </p>
+    </div>
+    <button></button>
+  </body>
+  <script>
+    $(document).ready(function () {
+       $("#box").on("mouseover mouseout", function(){
+         $(this).toggleClass("boxbg")("background-color", "orange")
+       })
+       $("#box").on(function() {
+        "click" : function(){
+
+        },
+        "keydown keyup": function () {
+          $(this).css("background-color", "orange");
+        }
+       });
+
+       $("button").on("click", function(){
+         $("#box").off("mouseover mouseout");
+       })
+     });
+
+  </script>
+</html>

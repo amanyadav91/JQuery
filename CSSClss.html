@@ -38,6 +38,7 @@
     <button id="adbtn">Add Class</button>
      <button id="rebtn">Remove Class</button>
       <button id="tbtn">Toggle Class</button>
+      <button id="stybtn">Style Button</button>
   </body>
   <script>
     $(document).ready(function(){
@@ -52,6 +53,10 @@
         // toggle class to the box
         $("#tbtn").click(function(){
             $(".box").toggleClass('second');
+        })
+        // style button
+        $("#stybtn").click(function(){
+            $(".box").toggle().css({background: 'yellow', padding: '20px', border: '2px solid black'});
         })
     })
   </script>

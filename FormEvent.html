@@ -73,6 +73,14 @@
                 $(this).css('background-color','yellow');
             });
 
+            // here using get method to get the value of the input field
+            $(".sform").submit(function(){
+                var name=$("#sname").val();
+                var sclass=$("#sclass").val();
+                alert('Form Submitted');
+                console.log(name,sclass);
+            });
+
         })
         </script>
     </form><hr>
